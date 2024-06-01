@@ -1,0 +1,47 @@
+<!-- <p>tab works!</p> -->
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link" href="javascript:;" 
+        (click)="onTabClick('angular')"
+        [ngClass] = "{
+            active : selectedFrameWork === 'angular'
+        }"
+        >Angular</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="javascript:;"
+        (click)="onTabClick('node')"
+        [ngClass] = "{
+            active : selectedFrameWork === 'node'
+        }"
+        >Node</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="javascript:;"
+        (click)="onTabClick('rxjs')"
+        [ngClass] = "{
+            active : selectedFrameWork === 'rxjs'
+        }"
+        >Rxjs</a>
+    </li>
+</ul>
+<hr>
+<div class="tab-body">
+    <div class="card" *ngIf="selectedFrameWork === 'angular'">
+        <div class="card-body">
+            <strong>Angular</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas perferendis praesentium iure ut recusandae eum a non dolore commodi omnis, ab temporibus nulla nesciunt expedita. Sequi temporibus deserunt doloremque aperiam?
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body" *ngIf="selectedFrameWork === 'node'">
+            <strong>Node</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas perferendis praesentium iure ut recusandae eum a non dolore commodi omnis, ab temporibus nulla nesciunt expedita. Sequi temporibus deserunt doloremque aperiam?
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body" *ngIf="selectedFrameWork === 'rxjs'">
+            <strong>Rxjs</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas perferendis praesentium iure ut recusandae eum a non dolore commodi omnis, ab temporibus nulla nesciunt expedita. Sequi temporibus deserunt doloremque aperiam?
+        </div>
+    </div>
+</div>

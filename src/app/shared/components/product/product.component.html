@@ -1,0 +1,18 @@
+<p>
+    The product name is
+     <strong>{{productName}}</strong> 
+     and its id is 
+     <strong>{{productId}}</strong>
+     and product status is
+      <strong>{{productStatus}}</strong> 
+</p>
+
+<p>
+    {{productName}}    
+</p>     
+
+<p [innerHTML]="productName">
+    
+</p>
+<input type="text" class="form-control" (keyup)="onKeyUp($event)">
+<input type="text" class="form-control" [value]="'Iphone'">
